@@ -1,0 +1,16 @@
+C:\Users\LENOVO\Desktop\gitlab\rpa\7) Rpa_Challenge_website>python Rpa_Challenge_website.py
+[RPA][INFO] - setting up TagUI for use in your Python environment
+[RPA][INFO] - downloading TagUI (~200MB) and unzipping to below folder...
+[RPA][INFO] - C:\Users\LENOVO\AppData\Roaming
+[RPA][INFO] - done. syncing TagUI with stable cutting edge version
+<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+[RPA][ERROR] - failed downloading from https://raw.githubusercontent.com/tebelorg/Tump/master/TagUI-Python/tagui...
+[RPA][ERROR] - use init() before using close()
+
+[RPA][INFO] - setting up TagUI for use in your Python environment
+[RPA][INFO] - downloading TagUI (~200MB) and unzipping to below folder...
+[RPA][INFO] - C:\Users\LENOVO\AppData\Roaming
+[RPA][INFO] - done. syncing TagUI with stable cutting edge version
+<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+[RPA][ERROR] - failed downloading from https://raw.githubusercontent.com/tebelorg/Tump/master/TagUI-Python/tagui...
+[RPA][ERROR] - use init() before using close()

@@ -1,0 +1,127 @@
+
+
+Pre-Requisites:
+
+    Set up a Python Environment.
+    Install Selenium v4. If you have conda or anaconda set up then using the pip package installer would be the most efficient method for Selenium installation. Simply run this command (on anaconda prompt, or directly on the Linux terminal):
+    pip install selenium
+
+    Download the latest WebDriver for the browser you wish to use, or install webdriver_manager by running the command, also install BeautifulSoup:
+
+    pip install webdriver_manager
+
+
+    pip install beautifulsoup4
+
+
+
+
+Step 1: Import the required packages.
+
+
+    from selenium import webdriver
+
+    from selenium.webdriver.chrome.service import Service
+
+    from selenium.webdriver.support.ui import WebDriverWait
+
+    from selenium.webdriver.support import expected_conditions as EC
+
+    from bs4 import BeautifulSoup
+
+    import codecs
+
+    import re
+
+    from webdriver_manager.chrome import ChromeDriverManager
+
+
+Selenium is needed in order to carry out web scraping and automate the chrome browser we'll
+  be using. Selenium uses the webdriver protocol, therefore the webdriver manager is imported
+  to obtain the ChromeDriver compatible with the version of the browser being used. 
+  BeautifulSoup is needed as an HTML parser, to parse the HTML content we scrape. 
+  Re is imported in order to use regex to match our keyword. Codecs are used to write to a text
+  file.
+
+Step 2: Obtain the version of ChromeDriver compatible with the browser being used.
+
+
+    driver=webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+
+    Step 3: Take the user input to obtain the URL of the website to be scraped, and web scrape the page.
+
+
+    val = input(“Enter a url: “)
+
+    wait = WebDriverWait(driver, 10)
+
+    driver.get(val)
+
+
+    get_url = driver.current_url
+    wait.until(EC.url_to_be(val))
+
+
+    if get_url == val:
+
+
+        page_source = driver.page_source
+
+
+
+
+For this example, the user input is: 
+https://www.browserstack.com/guide/how-ai-in-visual-testing-is-evolving
+
+The driver is used to get this URL and a wait command is used in order to let the page load.
+ Then a check is done using the current URL method to ensure that the correct URL is being
+ accessed.
+
+Step 4: Use BeautifulSoup to parse the HTML content obtained.
+
+
+    soup = BeautifulSoup(page_source,features=”html.parser”)
+    keyword=input(“Enter a keyword to find instances of in the article:”)
+    matches = soup.body.find_all(string=re.compile(keyword))
+
+    len_match = len(matches)
+
+    title = soup.title.text
+
+
+The HTML content web scraped with Selenium is parsed and made into a soup object.
+ Following this, user input is taken for a keyword for which we will search the article's body.
+ The keyword for this example is “data”. The body tags in the soup object are searched for all
+ instances of the word “data” using regex. Lastly, the text in the title tag found within the
+ soup object is extracted.
+
+Step 4: Store the data collected into a text file.
+
+
+    file=codecs.open(‘article_scraping.txt’, ‘a+’)
+
+    file.write(title+“\n”)
+
+    file.write(“The following are all instances of your keyword:\n”)
+
+    count=1
+
+    for i in matches:
+
+        file.write(str(count) + “.” +  i  + “\n”)
+
+        count+=1
+
+    file.write(“There were “+str(len_match)+” matches found for the keyword.”
+
+    file.close()
+
+    driver.quit()
+
+
+Use codecs to open a text file titled article_scraping.txt and write the title of the article
+ into the file, following this number, and append all instances of the keyword within the
+  article. Lastly, append the number of matches found for the keyword in the article. Close
+   the file and quit the driver.
+

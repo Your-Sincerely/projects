@@ -1,0 +1,32 @@
+Congratulation {trainee_name},
+
+You have been Successfully Nominated By {trainer_name} ,
+BHEL Bhopal for Project Training in HEP, BHEL Bhopal From {starting_date} To {Ending_date}.
+
+Your application status is INCOMPLETE, To complete the application process.
+You have to fill in Registration Details on the website
+https://bpledoc.bhel.com/SampleLogin/login.jsp
+
+Login Id: {Login_Id}
+Password: is your Date of Birth in DDMMYYYY format
+
+Note:
+1. Please Login and check your basic details. Proceed for Fee Payment only after verifying basic details.
+2. Please make fee payment at least 2 weeks before the start date of training, else your registration would automatically stand cancelled.
+3. In any case, fee once paid will not be refunded.
+
+Regards
+Tarun Kumar Kaushik
+In charge, VT-Section
+Human Resource Development Centre
+Bharat Heavy Electricals Limited, Bhopal
+Land-Line No: 0755-250-5055
+THIS IS AN AUTO-GENERATED E-MAIL, KINDLY DO NOT REPLY
+______________________________________________________________________________________________________________________________________________
+Disclaimer for the Electronic Transmission Message- E-mail
+ 
+ The information contained in this Electronic Transmission Message i.e. E-Mail and any attachments to this electronic message are intended for the exclusive use of the address(s) and may contain proprietary, confidential or privileged information. If you are not intended recipient, you should not disseminate, distribute or copy this e-mail. If you have received this message in error, you should destroy this message and may please notify the sender by email.
+ 
+ E-mail transmission is not guaranteed to be secure or error-free as information could be intercepted, corrupted, lost, destroyed, arrive late or incomplete, or may contain virus in transmission. The E-mail and its contents (with or without referred errors) shall therefore not attach any liability on the originator/sender of message or BHEL or its affiliates. Views or opinions, if any, presented in this e-mail are solely those of the sender and may not necessarily reflect the views or opinions of BHEL or its affiliates. Intended recipients(s) may like to verify the information or intended meaning through alternate communication mechanism before taking action on the E-mail or its contents.
+ 
+ WARNING: Although the company has taken reasonable precaution to ensure no viruses are present in this email, the recipient should check this email and any attachments for the presence of virus. The sender of the mail or BHEL accepts no liability for any damage caused by any virus transmitted by this email.
